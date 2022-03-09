@@ -1,7 +1,6 @@
 from django.contrib.auth.models import AbstractUser, User
-from django.contrib.auth.tokens import default_token_generator
 from django.db import models
-from django.urls import reverse
+
 
 
 class Profile(models.Model):
