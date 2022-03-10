@@ -43,13 +43,12 @@ INSTALLED_APPS = [
     'Simmonopoly'
 ]
 
-'''CHANNEL_LAYERS = {
+CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "ROUTING": "Simmonopoly.routing.channel_routing",
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
     },
 }
-'''
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -83,7 +82,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Third.wsgi.application'
-ASGI_APPLICATION = "Third.asgi.application"
+ASGI_APPLICATION = 'Third.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
